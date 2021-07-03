@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ScrollTrigger Parallax Header Effects</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <section>
+            <img src="bg.jpg" id="bg">
+            <h2 id="text">Mountains</h2>
+            <img src="man.png" id="man">
+            <img src="clouds_1.png" id="clouds_1">
+            <img src="clouds_2.png" id="clouds_2">
+            <img src="mountain_left.png" id="mountain_left">
+            <img src="mountain_right.png" id="mountain_right">
+        </section>
+        <div class="sec">
+            <h2>ScrollTrigger is Awesome</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere, est mollis mollis volutpat, lacus tellus consectetur enim, eget vehicula nulla sapien non est. Nunc ut ligula mi. In cursus ante nulla, nec rutrum quam volutpat ac. Mauris eget accumsan neque, vitae ornare ligula. Aenean iaculis id lorem eget convallis. Maecenas et augue in nibh euismod iaculis. Vestibulum vulputate, metus at maximus faucibus, lacus ligula facilisis ipsum, nec tincidunt tellus nulla in orci. Pellentesque ac ullamcorper lacus. Donec non imperdiet diam. Nulla facilisi.</p>
+            <p>Donec at laoreet arcu. Etiam a laoreet mi. Etiam fermentum eros ac malesuada molestie. Proin suscipit viverra velit sit amet convallis. Mauris a ex venenatis lorem pulvinar condimentum. Fusce molestie sed diam eget eleifend. Nulla molestie dolor ac eros molestie rutrum. Nam feugiat lectus id sapien aliquam iaculis. Nullam varius sapien semper, iaculis tortor id, luctus risus.</p>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+        <script>
+            gsap.to('#bg', {
+                scrollTrigger : {
+                    scrub : 1
+                },
+                scale : 1.5
+            });
+
+            gsap.to('#man', {
+                scrollTrigger : {
+                    scrub : 1
+                },
+                scale : 0.5
+            });
+
+            gsap.to('#mountain_left', {
+                scrollTrigger : {
+                    scrub : 1
+                },
+                x : -500,
+            });
+
+            gsap.to('#mountain_right', {
+                scrollTrigger : {
+                    scrub : 1
+                },
+                x : 500,
+            });
+
+            gsap.to('#cloud_1', {
+                scrollTrigger : {
+                    scrub : 1
+                },
+                x : 200,
+            });
+
+            gsap.to('#cloud_2', {
+                scrollTrigger : {
+                    scrub : 1
+                },
+                x : -200,
+            });
+
+            gsap.to('#text', {
+                scrollTrigger : {
+                    scrub : 1
+                },
+                y : 500,
+            });
+        </script>
+    </body>
+</html>
